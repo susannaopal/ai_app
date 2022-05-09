@@ -5,7 +5,9 @@ const Form = () => {
     <form>
       <p>Enter prompt</p>
       <textarea></textarea>
-      <button className='submit-btn'>Submit</button>
+      <div>
+        <button className='submit-btn'>Submit</button>
+      </div>
     </form>
   )
 }
