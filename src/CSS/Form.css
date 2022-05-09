@@ -1,5 +1,18 @@
-.form {
+form {
+
   text-align: left;
   margin-left: 25%;
   font-weight: bold;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+}
+
+.sumbit-btn {
+  background-color: blue;
+  color: white;
 }
