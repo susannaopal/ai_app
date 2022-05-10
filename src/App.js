@@ -7,13 +7,18 @@ import ResponsesContainer from './Components/ResponsesContainer';
 
 // const API_KEY = process.env.REACT_APP_API_KEY  
 // const API_URL = 
-
 const App = () => {
+  const [prompts, setResponse] = useState([{prompt: 'this is the prompt', response: 'this is my response'}])
+  
+ const useEffect = (() => {
+  //  setResponse()
+ }, [])
+
   return (
     <>
       <Header />
       <Form />
-      <ResponsesContainer />
+      <ResponsesContainer prompts={prompts}/>
     </>
   )
 }
