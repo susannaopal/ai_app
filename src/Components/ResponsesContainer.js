@@ -2,12 +2,12 @@ import '../CSS/ResponsesContainer.css';
 import Card from './Card'
 
 const ResponsesContainer = ( {prompts} ) => {
-  const responseCards = prompts.map(prompt => {
+  const responseCards = prompts.map((prompt, index) => {
     return (
       <Card 
         prompt={prompt.prompt}
         response={prompt.response}
-        key={prompt.id}
+        key={index}
         id={prompt.id}
       />
     )
