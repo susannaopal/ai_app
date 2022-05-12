@@ -1,9 +1,11 @@
 import '../CSS/Card.css';
 
-const Card = () => {
+const Card = ({prompt, response, id}) => {
   return (
     <div className='card'>
-      <p>Testing that I am a card...</p>
+      <h3>{prompt}</h3>
+      <p>{response}</p>
+      <button>🗑</button>    
     </div>
   )
 }
