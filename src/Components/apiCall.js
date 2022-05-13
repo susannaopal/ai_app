@@ -1,41 +1,16 @@
-// export const postNewItem = (addedItem) => {
-//     return fetch('http://localhost:3001/api/v1/inventory', {
-//       method: 'POST',
-//       body:  JSON.stringify({
-//         name: addedItem.name,
-//         type: addedItem.type,
-//         price: addedItem.price,
-//         numberAvailable: addedItem.price
-//       }),
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//       }
-//     })
-//     .then(response => response.json())
-//     .catch(error => console.log(error))
-// }
-export const fetchPrompt = () => {
-  return fetch('https://api.openai.com/v1/engines/text-curie-001/completions')
-  .then(response => response.json())
-  .then(data => console.log(data))
+import { Configuration, OpenAIApi } from "openai";
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
+export default async function (req, res) {
+  const completion = await openai.createCompletion("text-curie-001", {
+    prompt: generatePrompt(req.body),
+    temperature: 0.1,
+  });
+  console.log("did this run?1")
+  res.status(200).json({ result: completion.data.choices[0].text });
+  console.log("did this work?2")
 }
-
-// const data = {
-//  prompt: "Write a poem about a dog wearing skis",
-//  temperature: 0.5,
-//  max_tokens: 64,
-//  top_p: 1.0,
-//  frequency_penalty: 0.0,
-//  presence_penalty: 0.0,
-// };
- 
-// fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
-//  method: "POST",
-//  headers: {
-//    "Content-Type": "application/json",
-//    Authorization: `Bearer ${process.env.OPENAI_SECRET}`,
-//  },
-//  body: JSON.stringify(data),
-// });
-
