@@ -1,5 +1,6 @@
 import '../CSS/ResponsesContainer.css';
-import Card from './Card'
+import Card from './Card';
+
 
 const ResponsesContainer = ( {prompts} ) => {
   const responseCards = prompts.map((prompt, index) => {
