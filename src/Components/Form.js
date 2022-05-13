@@ -4,14 +4,14 @@ import { useState } from 'react';
 const Form = (props) => {
   const [entry, setEntry] = useState('')
 
+  //this function isn't working correctly
  const submitPrompt = event => {
     event.preventDefault();
-    // const newPrompt = {
-    //   id: Date.now(),
-    //   title,
-    //   description
-    // }
-    // props.addIdea(newIdea);
+    const addNewPrompt = {
+      id: Date.now(),
+      prompt
+    }
+    props.addPrompt(prompt);
     // clearInputs();
   }
 
