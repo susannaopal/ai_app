@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Response from './Responses.js';
 import Form from './Form.js';
 import './CSS/App.css'
+import { fetchPromptedResponse } from './apiCall'
 
 const App = () => {
   const [prompts, setPrompts] = useState([]);
