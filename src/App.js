@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Response from './Responses.js';
 import Form from './Form.js';
 import './CSS/App.css'
@@ -6,10 +6,13 @@ import { fetchPromptedResponse } from './apiCall'
 
 const App = () => {
   const [prompts, setPrompts] = useState([]);
+  //error state
+  //loader
 
 
   const addPrompt = (newPrompt) => {
-    setPrompts([...prompts, newPrompt])
+    fetchPromptedResponse(prompt)
+    .then(data => setPrompts([...prompts, newPrompt]))
   }
 
   const removePrompts = (id) => {

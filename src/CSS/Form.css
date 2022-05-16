@@ -6,8 +6,10 @@ form {
 }
 
 textarea {
-  width: 500px;
-  height: 200px;
+  height: 100px;
+  width: 350px;
+  resize: none;
+
 }
 
 .submit-btn {

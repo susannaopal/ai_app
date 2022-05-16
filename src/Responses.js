@@ -11,6 +11,7 @@ const Responses = ({prompts, removePrompts}) => {
           id={prompt.id}
           key={index}
           prompt={prompt.prompt}
+          Response={prompt.Response}
           removePrompts={removePrompts}
         />
       </>
