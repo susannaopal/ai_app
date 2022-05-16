@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = process.env.REACT_APP_API_KEY
+// const OPENAI_API_KEY=process.env.REACT_APP_API_KEY
 
 export const fetchPromptedResponse = (newPrompt) => {
   const data = {
@@ -14,7 +14,7 @@ return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
  method: "POST",
  headers: {
    "Content-Type": "application/json",
-   Authorization: `Bearer ${OPENAI_API_KEY}`,
+   Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
  },
  body: JSON.stringify(data),
 }).then(response => response.json())

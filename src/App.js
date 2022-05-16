@@ -9,10 +9,15 @@ const App = () => {
   //error state
   //loader
 
+  // useEffect((newPrompt) => {
+  //   fetchPromptedResponse(newPrompt)
+  //   .then(data => console.log(data))
+  //   // .then(data => setPrompts(data))
+  // }, [])
 
   const addPrompt = (newPrompt) => {
-    fetchPromptedResponse(prompt)
-    .then(data => setPrompts([...prompts, newPrompt]))
+    fetchPromptedResponse(newPrompt)
+   setPrompts([...prompts, newPrompt])
   }
 
   const removePrompts = (id) => {
