@@ -1,4 +1,4 @@
-// const OPENAI_API_KEY=process.env.REACT_APP_API_KEY
+// const OPENAI_API_KEY=process.env.OPENAI_API_KEY
 
 export const fetchPromptedResponse = (newPrompt) => {
   const data = {

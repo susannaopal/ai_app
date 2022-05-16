@@ -6,8 +6,7 @@ import { fetchPromptedResponse } from './apiCall'
 
 const App = () => {
   const [prompts, setPrompts] = useState([]);
-  //error state
-  //loader
+  //loader page?
 
   // useEffect((newPrompt) => {
   //   fetchPromptedResponse(newPrompt)
@@ -16,8 +15,8 @@ const App = () => {
   // }, [])
 
   const addPrompt = (newPrompt) => {
+    setPrompts([...prompts, newPrompt])
     fetchPromptedResponse(newPrompt)
-   setPrompts([...prompts, newPrompt])
   }
 
   const removePrompts = (id) => {
@@ -28,6 +27,7 @@ const App = () => {
   return (
     <>
       <h1>Open ai</h1>
+      {prompts.length ? prompts : <p>Please add a prompt!</p>}
       <Form addPrompt={addPrompt}/>
       <Response prompts={prompts} removePrompts={removePrompts}/>
     </>

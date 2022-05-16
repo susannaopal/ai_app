@@ -1,19 +1,23 @@
 import './CSS/Form.css'
 import { useState } from 'react';
-import { fetchPromptedResponse } from './apiCall'
+
 
   
 const Form = (props) => {
   const [prompt, setPrompt] = useState('')
+  // const [response, setResponse] = useState('')
 
+//need error handling
+//need to filter/sort by id number to display more recent first? 
   const submitPrompt = (event) => {
     event.preventDefault();
-    console.log("are you working?")
     const newPrompt = {
     id: Date.now(),
     prompt
+    // response
     }
     props.addPrompt(newPrompt); 
+    console.log(newPrompt, "is this working?")
     clearInputs(); 
     }
     
