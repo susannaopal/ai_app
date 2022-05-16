@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <h1>Open ai</h1>
-      {prompts.length ? prompts : <p>Please add a prompt!</p>}
+      {!prompts.length && <p>Please add a prompt!</p>}
       <Form addPrompt={addPrompt}/>
       <Response prompts={prompts} removePrompts={removePrompts}/>
     </>
