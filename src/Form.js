@@ -1,8 +1,6 @@
 import './CSS/Form.css'
 import { useState } from 'react';
 
-
-  
 const Form = (props) => {
   const [prompt, setPrompt] = useState('')
   
@@ -18,8 +16,6 @@ const Form = (props) => {
    const clearInputs = () => {
     setPrompt('')
   }
-
-
 
   return (
     <form>

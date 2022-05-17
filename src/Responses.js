@@ -3,15 +3,16 @@ import Card from './Card.js';
 import './CSS/Responses.css'
 
 
-const Responses = ({prompts, removePrompts}) => {
-  const promptCard = prompts.map((prompt, index) => {
+const Responses = ({responses, removePrompts}) => {
+  const promptCard = responses.map((response, index) => {
+    console.log("####response:", response)
     return (
       <>
         <Card 
-          key={index}
-          id={prompt.id}
-          prompt={prompt.prompt}
-          Response={prompt.Response}
+          // key={index}
+          id={response.id}
+          prompt={response.prompt.prompt}
+          result={response.result}
           removePrompts={removePrompts}
         />
       </>
