@@ -11,11 +11,11 @@ const App = () => {
   const addPrompt = (prompt) => {
     setPrompts(prompt)
     fetchPromptedResponse(prompts)
-    .then(data => setResponse([...responses, 
+    .then(data => setResponse([ 
       {
         prompt: prompt, 
         result: data.choices[0].text
-      }
+      }, ...responses
     ]))
   }
 
