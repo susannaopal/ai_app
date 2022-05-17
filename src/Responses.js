@@ -5,11 +5,10 @@ import './CSS/Responses.css'
 
 const Responses = ({responses, removePrompts}) => {
   const promptCard = responses.map((response, index) => {
-    console.log("####response:", response)
     return (
       <>
         <Card 
-          // key={index}
+          key={index}
           id={response.id}
           prompt={response.prompt.prompt}
           result={response.result}
