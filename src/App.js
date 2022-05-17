@@ -6,18 +6,20 @@ import { fetchPromptedResponse } from './apiCall'
 
 const App = () => {
   const [prompts, setPrompts] = useState([]);
-  //loader page?
-
-  // useEffect((newPrompt) => {
-  //   fetchPromptedResponse(newPrompt)
-  //   .then(data => console.log(data))
-  //   // .then(data => setPrompts(data))
-  // }, [])
-
-  const addPrompt = (newPrompt) => {
-    setPrompts([...prompts, newPrompt])
-    fetchPromptedResponse(newPrompt)
+  const [ response, setResponse ] = useState([]);
+ 
+  const addPrompt = (prompt) => {
+    setPrompts([...prompts, prompt])
+    fetchPromptedResponse(prompt)
+    // .then(data => console.log(data))
+     .then(data => setResponse([ 
+       {
+      prompt: prompt, 
+      result: data.choices[0].text
+      }, ...response
+    ]))
   }
+
 
   const removePrompts = (id) => {
     const filteredPrompts = prompts.filter(prompt => prompt.id !== id)

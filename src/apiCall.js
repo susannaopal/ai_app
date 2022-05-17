@@ -1,10 +1,10 @@
 const API_KEY = process.env.REACT_APP_API_KEY
-console.log(process.env.REACT_APP_API_KEY)
 
-export const fetchPromptedResponse = (newPrompt) => {
+
+export const fetchPromptedResponse = (prompt) => {
   const data = {
- prompt: `${newPrompt}`,
- temperature: 0.5,
+ prompt: `${prompt}`,
+ temperature: 0.9,
  max_tokens: 75,
  top_p: 1.0,
  frequency_penalty: 0.0,
@@ -18,9 +18,17 @@ return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
    Authorization: `Bearer ${API_KEY}`,
  },
  body: JSON.stringify(data),
-}).then(response => response.json())
-.then(data => console.log(data))
+}) 
+  
+.then(response => response.json())
+.then(data => console.log("are you working: datalog:", data))
 };
+
+
+
+
+
+// { result: completion.data.choices[0].text }
 
 // .then(response => {
 //   if (!response.ok) {
