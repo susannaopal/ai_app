@@ -11,20 +11,15 @@ export const fetchPromptedResponse = (newPrompt) => {
 };
  
 return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
- method: "POST",
- headers: {
-   "Content-Type": "application/json",
-   Authorization: `Bearer ${API_KEY}`,
-  },
-  body: JSON.stringify(data),
-  }).then(response => {
-  if (!response.ok) {
-    throw new Error("Sorry, that didn't quite work.")
-    } else {
-      return response.json()
-    }
-  })
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${API_KEY}`,
+    },
+    body: JSON.stringify(data),
+  }).then(response => response.json())
 };
+
 
 
 

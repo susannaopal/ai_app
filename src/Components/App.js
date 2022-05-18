@@ -3,9 +3,16 @@ import { fetchPromptedResponse } from '../apiCall';
 import Responses from './Responses';
 import Form from './Form';
 import '../CSS/App.css';
+import Error from './Error';
 
 const App = () => {
   const [responses, setResponse] = useState([]);
+  const [error, setError] = useState('')
+
+  const removePrompts = (id) => {
+    const filteredPrompts = responses.filter(response => response.id !== id)
+    setResponse(filteredPrompts)
+  }
 
 const addPrompt = (prompt) => {
     fetchPromptedResponse(prompt)
@@ -15,13 +22,12 @@ const addPrompt = (prompt) => {
         prompt: prompt, 
         result: data.choices[0].text
       }, ...responses]))
-  }
-
-  const removePrompts = (id) => {
-    const filteredPrompts = responses.filter(response => response.id !== id)
-    setResponse(filteredPrompts)
-  }
-
+    }
+  if (error) {
+    return (
+      <Error />
+    )
+  } else {
   return (
     <div className='App'>
       <h1 className='title'>✨Fun with AI✨</h1>
@@ -34,5 +40,8 @@ const addPrompt = (prompt) => {
     </div>
   )
 }
+}
+
+
 
 export default App;
