@@ -1,90 +1,75 @@
+# AI FUN: Shopify FE Internship Challenge
 
+Visit the deployed link [here](https://gotta-ketchum-all.herokuapp.com/)
 
-# Getting Started with Create React App
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Abstract](#abstract)
+- [Technologies](#technologies)
+- [Code Architecture](#code-architecture)
+- [Illustrations](#illustrations)
+- [Install + Setup](#set-up)
+- [Contributors](#contributors)
+- [Wins](#wins)
+- [Challenges + Improvements](#challenges-+-Improvements)
+- [Project Specs](#project-specs)
 
-## Available Scripts
+## Abstract
 
-In the project directory, you can run:
+Our goal was to build a React app with Typescript and the PokeApi. Our app allows users to view pokemon by generation or all at once. Users can search for a pokemon by name and their search results will filter in real time. If a user clicks on a pokemon card it will show the user that pokemon's details. Users will also be able to favorite pokemon that will show up on a seperate `favorites` page.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Javascript
+- React
+- React Hooks
+- VScode
+- [GPT-3 API by OpenAI](https://openai.com/api/)
+- Cypress
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Illustrations
 
-### `npm test`
+Main page:
+![main-page](https://media.giphy.com/media/QepfVvB6Kq7nCuKuSL/giphy.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pokemon details:
+![pokemon-details](https://media.giphy.com/media/Ll5UVTEim6MSh5LnlE/giphy.gif)
 
-### `npm run build`
+Search by name:
+![pokemon-search](https://media.giphy.com/media/MKeaRumRqnOPz4ECkT/giphy.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Favorites:
+![Favorite](https://media.giphy.com/media/fwshCmocDsC0quW2PE/giphy.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Install + Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone this [repo](git@github.com:susannaopal/ai_app.git) to your machine.
+- `cd` into the directory `ai_app`
+- Run `npm install`
+- Run `npm start`
+- Add the [local host](http://localhost:3000/) into your browser
 
-### `npm run eject`
+## Contributor
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Susanna Carey](https://github.com/susannaopal)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Wins
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- App styling is on point.
+- Our app functions the way we intended it to.
+- Good communication and workflow.  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Challenges + Improvements
 
-## Learn More
+- Learning a new language is difficult.
+- Styling on favoriting button within the favorites view is not consistent (but the functionality is there!).
+- Passing state around makes it difficult to keep track of the data used within different parts of the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Iterations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Comparison feature to compare type strengths and weaknesses between pokemon.
+- The ability to search by properties other than name.
 
-### Code Splitting
+## Project Specs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-Clone this repo to your local machine.
-Run npm install to install the dependencies.
-Sign up for OpenAI: <https://beta.openai.com/signup>.
-Visit <https://beta.openai.com/account/api-keys> to get your secret API key.
-Create a new file in the root of this repository called .env.
-Add .env to the .gitignore file.
-Add REACT_APP_API_KEY={your api key} to the .env file.
-Run npm start to run the application in your browser at localhost:3000.
-To run Cypress tests, run npm run cypress.
-Clone this repo to your local machine.
-Run npm install to install the dependencies.
-Sign up for OpenAI: <https://beta.openai.com/signup>.
-Visit <https://beta.openai.com/account/api-keys> to get your secret API key.
-Create a new file in the root of this repository called .env.
-Add .env to the .gitignore file.
-Add REACT_APP_API_KEY={your api key} to the .env file.
-Run npm start to run the application in your browser at localhost:3000.
-To run Cypress tests, run npm run cypress.
+- The project spec for this challenge be found [here](https://docs.google.com/document/d/1O7mCynsz_cBXkEaCFGSZAuvAOY84QVq35l20xJwjOYg/edit)
