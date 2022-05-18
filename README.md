@@ -1,3 +1,5 @@
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +70,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clone this repo to your local machine.
+Run npm install to install the dependencies.
+Sign up for OpenAI: <https://beta.openai.com/signup>.
+Visit <https://beta.openai.com/account/api-keys> to get your secret API key.
+Create a new file in the root of this repository called .env.
+Add .env to the .gitignore file.
+Add REACT_APP_API_KEY={your api key} to the .env file.
+Run npm start to run the application in your browser at localhost:3000.
+To run Cypress tests, run npm run cypress.
+Clone this repo to your local machine.
+Run npm install to install the dependencies.
+Sign up for OpenAI: <https://beta.openai.com/signup>.
+Visit <https://beta.openai.com/account/api-keys> to get your secret API key.
+Create a new file in the root of this repository called .env.
+Add .env to the .gitignore file.
+Add REACT_APP_API_KEY={your api key} to the .env file.
+Run npm start to run the application in your browser at localhost:3000.
+To run Cypress tests, run npm run cypress.
