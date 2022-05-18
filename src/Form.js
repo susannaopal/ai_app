@@ -3,11 +3,7 @@ import { useState } from 'react';
 
 const Form = (props) => {
   const [prompt, setPrompt] = useState('')
-    
-  const handleChange = (event) => {
-    event.preventDefault();
-    setPrompt(event.target.value)
-  }
+
 
   const submitPrompt = (event) => {
     event.preventDefault();

@@ -13,6 +13,7 @@ const App = () => {
     fetchPromptedResponse(prompts)
     .then(data => setResponse([ 
       {
+        id: data.id,
         prompt: prompt, 
         result: data.choices[0].text
       }, ...responses]))
@@ -27,9 +28,10 @@ const App = () => {
     <div className='App'>
       <h1 className='title'>✨Fun with AI✨</h1>
       <div className='add-prompt-div'>
-        {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
       </div>
       <Form addPrompt={addPrompt}/>
+        {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
+      <h2>Responses:</h2>
       <Response responses={responses} removePrompts={removePrompts}/>
     </div>
   )
