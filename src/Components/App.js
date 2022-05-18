@@ -11,9 +11,9 @@ const addPrompt = (prompt) => {
     fetchPromptedResponse(prompt)
     .then(data => setResponse([ 
       {
+        id: data.id,
         prompt: prompt, 
-        result: data.choices[0].text,
-        id: data.id
+        result: data.choices[0].text
       }, ...responses]))
   }
 
