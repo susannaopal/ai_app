@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Response from './Responses.js';
-import Form from './Form.js';
-import './CSS/App.css'
-import { fetchPromptedResponse } from './apiCall'
+import { fetchPromptedResponse } from '../apiCall';
+import Responses from './Responses';
+import Form from './Form';
+import '../CSS/App.css';
 
 const App = () => {
   const [prompts, setPrompts] = useState('');
@@ -32,7 +32,7 @@ const App = () => {
       <Form addPrompt={addPrompt}/>
         {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
       <h2>Responses:</h2>
-      <Response responses={responses} removePrompts={removePrompts}/>
+      <Responses responses={responses} removePrompts={removePrompts}/>
     </div>
   )
 }

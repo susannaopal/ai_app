@@ -1,6 +1,4 @@
-import './CSS/Card.css'
-
-import React from 'react';
+import '../CSS/Card.css'
 
 const Card = ({id, prompt, result, removePrompts}) => {
   return (
@@ -10,6 +8,6 @@ const Card = ({id, prompt, result, removePrompts}) => {
       <button onClick={() => removePrompts(id)}>🆇</button>
     </div>
   )
-}
+};
 
 export default Card;

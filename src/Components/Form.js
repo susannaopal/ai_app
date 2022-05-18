@@ -1,5 +1,5 @@
-import './CSS/Form.css'
 import { useState } from 'react';
+import '../CSS/Form.css';
 
 const Form = (props) => {
   const [prompt, setPrompt] = useState('')

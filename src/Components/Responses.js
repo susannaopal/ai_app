@@ -1,7 +1,5 @@
-import React from 'react';
-import Card from './Card.js';
-import './CSS/Responses.css'
-
+import '../CSS/Responses.css';
+import Card from './Card'
 
 const Responses = ({responses, removePrompts}) => {
   const promptCard = responses.map((response, index) => {
@@ -22,6 +20,6 @@ const Responses = ({responses, removePrompts}) => {
       {promptCard}
     </>
   )
-}
+};
 
 export default Responses;
