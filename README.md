@@ -4,6 +4,11 @@
 
 - [Susanna Carey](https://github.com/susannaopal)
 
+## Visit App
+
+- Visit the deployed link [here](https://ai-fun-app.herokuapp.com/)
+- visit App repo on github [here](https://github.com/susannaopal/ai_app)
+
 ## Table of Contents
 
 - [Abstract](#abstract)
@@ -51,11 +56,6 @@ App User Tutorial:
 - Run `npm install`
 - Run `npm start`
 - Add the [local host](http://localhost:3000/) into your browser
-
-## Visit App
-
-- Visit the deployed link [here](https://ai-fun-app.herokuapp.com/)
-- visit App repo on github [here](https://github.com/susannaopal/ai_app)
 
 ## Wins
 
