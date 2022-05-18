@@ -1,21 +1,16 @@
 import { useState } from 'react';
 import '../CSS/Form.css';
 
-const Form = (props) => {
+const Form = ({ addPrompt }) => {
   const [prompt, setPrompt] = useState('')
 
-
-  const submitPrompt = (event) => {
-    event.preventDefault();
-    const newPrompt = {
-      prompt
-    }
-      props.addPrompt(newPrompt); 
-      setPrompt('')
-    }
-
   return (
-    <form>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        addPrompt(prompt)
+        setPrompt('');
+      }}>
       <textarea className='text-area'
         type='text'
         name='prompt'
@@ -24,11 +19,12 @@ const Form = (props) => {
         onChange={event => setPrompt(event.target.value)}
       />
       <div className='btn-div'>
-         <button className='submit-btn' onClick={submitPrompt}>SUBMIT</button>
+        <button className='submit-btn'>Submit</button>
       </div>
     </form>
   )
 }
 
 
+     
 export default Form;

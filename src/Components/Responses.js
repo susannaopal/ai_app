@@ -8,7 +8,7 @@ const Responses = ({responses, removePrompts}) => {
         <Card 
           key={index}
           id={response.id}
-          prompt={response.prompt.prompt}
+          prompt={response.prompt}
           result={response.result}
           removePrompts={removePrompts}
         />

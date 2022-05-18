@@ -5,17 +5,15 @@ import Form from './Form';
 import '../CSS/App.css';
 
 const App = () => {
-  const [prompts, setPrompts] = useState('');
   const [responses, setResponse] = useState([]);
- 
-  const addPrompt = (prompt) => {
-    setPrompts(prompt)
-    fetchPromptedResponse(prompts)
+
+const addPrompt = (prompt) => {
+    fetchPromptedResponse(prompt)
     .then(data => setResponse([ 
       {
-        id: data.id,
         prompt: prompt, 
-        result: data.choices[0].text
+        result: data.choices[0].text,
+        id: data.id
       }, ...responses]))
   }
 
