@@ -3,7 +3,7 @@ const API_KEY = process.env.REACT_APP_API_KEY
 export const fetchPromptedResponse = (newPrompt) => {
   const data = {
     prompt: `${newPrompt}`,
-    temperature: 0.5,
+    temperature: 1,
     max_tokens: 250,
     top_p: 1.0,
     frequency_penalty: 0.0,
@@ -15,15 +15,15 @@ return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
  headers: {
    "Content-Type": "application/json",
    Authorization: `Bearer ${API_KEY}`,
- },
- body: JSON.stringify(data),
-}).then(response => {
+  },
+  body: JSON.stringify(data),
+  }).then(response => {
   if (!response.ok) {
     throw new Error("Sorry, that didn't quite work.")
-  } else {
-    return response.json()
-  }
-})
+    } else {
+      return response.json()
+    }
+  })
 };
 
 

@@ -27,7 +27,7 @@ const App = () => {
     <div className='App'>
       <h1 className='title'>✨Fun with AI✨</h1>
       <div className='add-prompt-div'>
-        {!responses.length && <p className='add-p-tag'>☟ Please add a prompt to get started...</p>}
+        {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
       </div>
       <Form addPrompt={addPrompt}/>
       <Response responses={responses} removePrompts={removePrompts}/>

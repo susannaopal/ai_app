@@ -3,30 +3,33 @@ import { useState } from 'react';
 
 const Form = (props) => {
   const [prompt, setPrompt] = useState('')
-  
+    
+  const handleChange = (event) => {
+    event.preventDefault();
+    setPrompt(event.target.value)
+  }
+
   const submitPrompt = (event) => {
     event.preventDefault();
     const newPrompt = {
-    prompt
-  }
-    props.addPrompt(newPrompt); 
-    clearInputs(); 
+      prompt
     }
-
-   const clearInputs = () => {
-    setPrompt('')
-  }
+      props.addPrompt(newPrompt); 
+      setPrompt('')
+    }
 
   return (
     <form>
-      <textarea 
+      <textarea className='text-area'
         type='text'
         name='prompt'
-        placeholder='prompt'
+        placeholder='Enter your prompt...⬇'
         value={prompt}
         onChange={event => setPrompt(event.target.value)}
       />
-      <button onClick={submitPrompt}>SUBMIT</button>
+      <div className='btn-div'>
+         <button className='submit-btn' onClick={submitPrompt}>SUBMIT</button>
+      </div>
     </form>
   )
 }
