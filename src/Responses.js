@@ -6,7 +6,7 @@ import './CSS/Responses.css'
 const Responses = ({responses, removePrompts}) => {
   const promptCard = responses.map((response, index) => {
     return (
-      <>
+      <div className='responses-container'>
         <Card 
           key={index}
           id={response.id}
@@ -14,7 +14,7 @@ const Responses = ({responses, removePrompts}) => {
           result={response.result}
           removePrompts={removePrompts}
         />
-      </>
+      </div>
     )
   })
   return (

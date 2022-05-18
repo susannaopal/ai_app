@@ -15,8 +15,7 @@ const App = () => {
       {
         prompt: prompt, 
         result: data.choices[0].text
-      }, ...responses
-    ]))
+      }, ...responses]))
   }
 
   const removePrompts = (id) => {

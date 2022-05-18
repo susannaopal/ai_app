@@ -1,16 +1,5 @@
-/* h2 {
-  text-align: left;
-  margin-left: 25%;
-} */
-
-/* 
 .responses-container {
-  text-align: left;
-  margin-left: 25%;
-  border: solid 2px turquoise;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-} */
+  align-items: center;
+  opacity: 0.5;
+} 
 

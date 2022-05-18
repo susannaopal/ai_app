@@ -7,7 +7,6 @@ const Form = (props) => {
   const submitPrompt = (event) => {
     event.preventDefault();
     const newPrompt = {
-    id: Date.now(),
     prompt
   }
     props.addPrompt(newPrompt); 
