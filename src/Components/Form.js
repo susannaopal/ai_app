@@ -1,15 +1,34 @@
+import { useState } from 'react';
 import '../CSS/Form.css';
 
-const Form = () => {
+const Form = (props) => {
+  const [prompt, setPrompt] = useState('')
+
+
+  const submitPrompt = (event) => {
+    event.preventDefault();
+    const newPrompt = {
+      prompt
+    }
+      props.addPrompt(newPrompt); 
+      setPrompt('')
+    }
+
   return (
     <form>
-      <p>Enter prompt</p>
-      <textarea></textarea>
-      <div>
-        <button className='submit-btn'>Submit</button>
+      <textarea className='text-area'
+        type='text'
+        name='prompt'
+        placeholder='Enter your prompt...⬇'
+        value={prompt}
+        onChange={event => setPrompt(event.target.value)}
+      />
+      <div className='btn-div'>
+         <button className='submit-btn' onClick={submitPrompt}>SUBMIT</button>
       </div>
     </form>
   )
 }
+
 
 export default Form;

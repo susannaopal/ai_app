@@ -1,0 +1,31 @@
+html {
+  background-color: #77B2FF;
+  height: 50vh;
+  width: 100vw;
+  color: whitesmoke;
+} 
+
+.App {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+}
+
+.add-prompt-div {
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+  margin: auto;
+  width: 25%;
+  padding: 1px;
+}
+
+.add-p-tag {
+  font-size: large;
+}
+
+
+

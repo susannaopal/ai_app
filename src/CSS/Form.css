@@ -1,21 +1,32 @@
 form {
-  text-align: left;
-  margin-left: 25%;
+  align-items: center;
   font-weight: bold;
-  border: solid 2px red;
 }
 
-textarea {
-  width: 500px;
-  height: 200px;
+.text-area {
+  height: 100px;
+  width: 350px;
+  resize: none;
+  border-radius: 7px;
 }
 
 .submit-btn {
-    background-color: #004BC7;
-    color: white;
-    border: none;
-    margin-left: 416px;
-    border-radius: 3px;
-    height: 30px;
-    width: 8vw;
+  background-color: #004BC7;
+  color: white;
+  border: none;
+  margin-left: 416px;
+  border-radius: 3px;
+  height: 30px;
+  width: 8vw;
+  cursor: pointer;
+  box-shadow: 3px 3px rgb(71, 71, 192);
+}
+
+.submit-btn:hover {
+  transition: .2s;
+  transform: scale(1.5);
+}
+
+.btn-div {
+  align-items: center;
 }

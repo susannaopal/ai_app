@@ -1,12 +1,13 @@
-import '../CSS/Card.css';
+import '../CSS/Card.css'
 
-const Card = ({prompt, response, id}) => {
+const Card = ({id, prompt, result, removePrompts}) => {
   return (
     <div className='card'>
-      <h3>{prompt}</h3>
-      <p>{response}</p>
-      <button>🗑</button>    
+      <h3>Prompt: {prompt}</h3>
+      <h4>Response: {result}</h4>
+      <button onClick={() => removePrompts(id)}>🆇</button>
     </div>
   )
-}
+};
+
 export default Card;
