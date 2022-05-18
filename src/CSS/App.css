@@ -1,10 +1,29 @@
-.App {
-  text-align: center;
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #77B2FF;
+  height: 50vh;
+  width: 100vw;
+  color: whitesmoke;
 }
 
-.header {
-  text-align: left;
-  margin-left: 25%;
-  border: solid 2px green;
+.App {
+  text-align: center;
+  border: 2px solid hotpink;
 }
+
+.title {
+  text-align: center;
+  border: 2px solid white;
+}
+
+.add-prompt-div {
+  border: 2px dotted white;
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+}
+
+
 
