@@ -54,7 +54,7 @@ App User Tutorial:
 
 ## Visit App
 
-- Visit the deployed link [here](https://ai_app.surge.sh/)
+- Visit the deployed link [here](https://ai-fun-app.herokuapp.com/))
 - visit App repo on github [here](https://github.com/susannaopal/ai_app)
 
 ## Wins
