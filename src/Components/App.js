@@ -23,23 +23,23 @@ const addPrompt = (prompt) => {
         result: data.choices[0].text
       }, ...responses]))
     }
-  if (error) {
+      if (error) {
+        return (
+          <Error />
+        )
+      } else {
     return (
-      <Error />
-    )
-  } else {
-  return (
-    <div className='App'>
-      <h1 className='title'>✨Fun with AI✨</h1>
-      <div className='add-prompt-div'>
+      <div className='App'>
+        <h1 className='title'>✨Fun with AI✨</h1>
+        <div className='add-prompt-div'>
+        </div>
+        <Form addPrompt={addPrompt}/>
+          {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
+        <h2>Responses:</h2>
+        <Responses responses={responses} removePrompts={removePrompts}/>
       </div>
-      <Form addPrompt={addPrompt}/>
-        {!responses.length && <p className='add-p-tag'>No prompts yet -- add one!</p>}
-      <h2>Responses:</h2>
-      <Responses responses={responses} removePrompts={removePrompts}/>
-    </div>
-  )
-}
+    )
+  }
 }
 
 
