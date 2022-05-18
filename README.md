@@ -1,4 +1,4 @@
-# AI FUN: Shopify FE Internship Challenge
+# Fun With AI: Shopify FE Internship Challenge
 
 ## Contributor
 
@@ -56,6 +56,7 @@ App User Tutorial:
 - Run `npm install`
 - Run `npm start`
 - Add the [local host](http://localhost:3000/) into your browser
+- To test with Cypress Testing, run `npm run cypress`
 
 ## Wins
 
