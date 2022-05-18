@@ -52,9 +52,10 @@ App User Tutorial:
 - Run `npm start`
 - Add the [local host](http://localhost:3000/) into your browser
 
-## Deployed App
+## Visit App
 
-Visit the deployed link [here](https://ai_app.surge.sh/)
+- Visit the deployed link [here](https://ai_app.surge.sh/)
+- visit App repo on github [here](https://github.com/susannaopal/ai_app)
 
 ## Wins
 
