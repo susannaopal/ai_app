@@ -22,6 +22,7 @@ const addPrompt = (prompt) => {
         prompt: prompt, 
         result: data.choices[0].text
       }, ...responses]))
+       .catch(error => setError(error))
     }
       if (error) {
         return (
