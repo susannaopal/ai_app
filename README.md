@@ -6,7 +6,7 @@
 
 ## Visit App
 
-- Visit the deployed link [here](https://ai-fun-app.herokuapp.com/)
+- Visit the deployed link [here](fun-with-ai.surge.sh)
 - visit App repo on github [here](https://github.com/susannaopal/ai_app)
 
 ## Table of Contents
